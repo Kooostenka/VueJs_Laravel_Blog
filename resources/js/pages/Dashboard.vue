@@ -32,34 +32,34 @@
     export default {
         data() {
             return {
-                name: "rr",
+                name: "",
             };
         },
-        // mounted() {
-        //     axios
-        //         .get("/api/user")
-        //         .then((response) => (this.name = response.data.name))
-        //         .catch((error) => {
-        //             if (error.response.status === 401) {
-        //                 this.$emit("updateSidebar");
-        //                 localStorage.removeItem("authenticated");
-        //                 this.$router.push({ name: "Login" });
-        //             }
-        //         });
-        // },
-        //
-        // methods: {
-        //     logout() {
-        //         axios
-        //             .post("/api/logout")
-        //             .then((response) => {
-        //                 this.$router.push({ name: "Home" });
-        //                 localStorage.removeItem("authenticated");
-        //                 this.$emit("updateSidebar");
-        //             })
-        //             .catch((error) => console.log(error));
-        //     },
-        // },
+        mounted() {
+            axios
+                .get("/api/user")
+                .then((response) => (this.name = response.data.name))
+                .catch((error) => {
+                    if (error.response.status === 401) {
+                        this.$emit("updateSidebar");
+                        localStorage.removeItem("authenticated");
+                        this.$router.push({ name: "Login" });
+                    }
+                });
+        },
+
+        methods: {
+            logout() {
+                axios
+                    .post("/api/logout")
+                    .then((response) => {
+                        this.$router.push({ name: "Home" });
+                        localStorage.removeItem("authenticated");
+                        this.$emit("updateSidebar");
+                    })
+                    .catch((error) => console.log(error));
+            },
+        },
     };
 </script>
 
