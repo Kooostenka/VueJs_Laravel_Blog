@@ -8,9 +8,12 @@ import SingleBlog from "../pages/SingleBlog.vue";
 import Login from "../pages/Login.vue";
 import Register from "../pages/Register.vue";
 import Dashboard from "../pages/Dashboard.vue";
+
 import CreateCategories from "../categories/CreateCategories.vue";
 import CategoriesList from "../categories/CategoriesList.vue";
 import EditCategories from "../categories/EditCategories.vue";
+
+import CreatePosts from "../posts/CreatePosts.vue";
 
 const routes = [
     {
@@ -75,6 +78,12 @@ const routes = [
         component: EditCategories,
         meta:{requiresAuth:true},
         props: true
+    },
+    {
+        path: "/posts/create",
+        name: "CreatePosts",
+        component: CreatePosts,
+        meta:{requiresAuth:true}
     },
 ];
 

@@ -25,10 +25,20 @@ Route::middleware('auth:sanctum')->put('categories/{category}', [\App\Http\Contr
 Route::middleware('auth:sanctum')->delete('categories/{category}', [\App\Http\Controllers\CategoryController::class, 'destroy']);
 
 
+//posts
+Route::middleware('auth:sanctum')->post('posts', [\App\Http\Controllers\PostController::class, 'store']);
+Route::middleware('auth:sanctum')->put('posts/{post:slug}', [\App\Http\Controllers\PostController::class, 'update']);
+Route::middleware('auth:sanctum')->delete('posts/{post:slug}', [\App\Http\Controllers\PostController::class, 'destroy']);
+
+
 Route::middleware('auth:sanctum')->post('logout', [\Laravel\Fortify\Http\Controllers\AuthenticatedSessionController::class, 'destroy']);
 Route::post('register', [\Laravel\Fortify\Http\Controllers\RegisteredUserController::class, 'store']);
 Route::post('login', [\Laravel\Fortify\Http\Controllers\AuthenticatedSessionController::class, 'store']);
 
 
-
+//categories
 Route::get('categories', [\App\Http\Controllers\CategoryController::class, 'index']);
+
+//posts
+Route::get('posts/{post:slug}', [\App\Http\Controllers\PostController::class, 'show']);
+Route::get('posts', [\App\Http\Controllers\PostController::class, 'index']);
