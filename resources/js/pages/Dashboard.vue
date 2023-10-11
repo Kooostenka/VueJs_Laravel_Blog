@@ -4,7 +4,7 @@
         <h1 class="heading">Dashboard</h1>
         <span>Hi {{ name }}!</span>
         <div class="links">
-<!--            <ul>-->
+            <ul>
 <!--                <li>-->
 <!--                    <router-link :to="{ name: 'CreatePosts' }">Create Posts</router-link>-->
 <!--                </li>-->
@@ -13,17 +13,17 @@
 <!--                    >Posts List</router-link-->
 <!--                    >-->
 <!--                </li>-->
-<!--                <li>-->
-<!--                    <router-link :to="{ name: 'CreateCategories' }"-->
-<!--                    >Create Categories</router-link-->
-<!--                    >-->
-<!--                </li>-->
-<!--                <li>-->
-<!--                    <router-link :to="{ name: 'CategoriesList' }"-->
-<!--                    >Categories List</router-link-->
-<!--                    >-->
-<!--                </li>-->
-<!--            </ul>-->
+                <li>
+                    <router-link :to="{ name: 'CreateCategories' }"
+                    >Create Categories</router-link
+                    >
+                </li>
+                <li>
+                    <router-link :to="{ name: 'CategoriesList' }"
+                    >Categories List</router-link
+                    >
+                </li>
+            </ul>
         </div>
     </div>
 </template>

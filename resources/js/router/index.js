@@ -8,6 +8,9 @@ import SingleBlog from "../pages/SingleBlog.vue";
 import Login from "../pages/Login.vue";
 import Register from "../pages/Register.vue";
 import Dashboard from "../pages/Dashboard.vue";
+import CreateCategories from "../categories/CreateCategories.vue";
+import CategoriesList from "../categories/CategoriesList.vue";
+import EditCategories from "../categories/EditCategories.vue";
 
 const routes = [
     {
@@ -53,7 +56,25 @@ const routes = [
         name: "Dashboard",
         component: Dashboard,
         meta:{requiresAuth:true}
-
+    },
+    {
+        path: "/categories/create",
+        name: "CreateCategories",
+        component: CreateCategories,
+        meta:{requiresAuth:true}
+    },
+    {
+        path: "/categories",
+        name: "CategoriesList",
+        component: CategoriesList,
+        meta:{requiresAuth:true}
+    },
+    {
+        path: "/categories/:id/edit",
+        name: "EditCategories",
+        component: EditCategories,
+        meta:{requiresAuth:true},
+        props: true
     },
 ];
 

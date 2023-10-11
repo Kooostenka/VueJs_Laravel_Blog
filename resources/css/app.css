@@ -523,3 +523,31 @@ textarea {
     margin-top: 10px;
     margin-bottom: 15px;
 }
+
+.success-msg {
+    padding: 10px 12px;
+    border-radius: 3px;
+    color: #270;
+    background-color: #dff2bf;
+    position: fixed;
+    top: 30px;
+    right: 30px;
+}
+
+.edit-link {
+    padding: 6px 20px;
+    background-color: #4caf50;
+    color: #fff;
+    font-size: 14px;
+    display: inline-block;
+}
+
+.delete-btn {
+    padding: 6px 13px;
+    background-color: red;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
