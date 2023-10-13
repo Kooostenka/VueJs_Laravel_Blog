@@ -40,5 +40,9 @@ Route::post('login', [\Laravel\Fortify\Http\Controllers\AuthenticatedSessionCont
 Route::get('categories', [\App\Http\Controllers\CategoryController::class, 'index']);
 
 //posts
+Route::get('home-posts', [\App\Http\Controllers\HomeController::class, 'index']);
+
 Route::get('posts/{post:slug}', [\App\Http\Controllers\PostController::class, 'show']);
 Route::get('posts', [\App\Http\Controllers\PostController::class, 'index']);
+Route::get('related-posts/{post:slug}', [\App\Http\Controllers\RelatedPostController::class, 'index']);
+Route::get('dashboard-posts', [\App\Http\Controllers\DashboardPostController::class, 'index']);
